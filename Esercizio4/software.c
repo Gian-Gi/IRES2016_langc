@@ -34,11 +34,25 @@ void Software_getVersion(Software* this, char* version)
 
 int main()
 {
-	int numel = 10000;
+	int numel = 100000;
+	Software* mySoftware = malloc(numel * sizeof(Software));
+	char strAp1[10];
+	char strAp2[10];
 	for (int i = 0; i < numel; ++i)
 	{
-		/* code */
+		sprintf(strAp1, "%d", i+1);
+		strcpy(strAp2, "SW");
+		strcat(strAp2, strAp1);
+		Software_setName(&mySoftware[i], strAp2);
+		Software_setVersion(&mySoftware[i], strAp1);
 	}
+
+//	for (int i = 0; i < numel; ++i)
+//	{
+//		Software_getName(&mySoftware[i], strAp1);
+//		Software_getVersion(&mySoftware[i], strAp2);
+//		printf("%s  %s\n", strAp1, strAp2);
+//	}
 
 	return EXIT_SUCCESS;
 }
