@@ -47,12 +47,12 @@ int main()
 		Software_setVersion(&mySoftware[i], strAp1);
 	}
 
-//	for (int i = 0; i < numel; ++i)
-//	{
-//		Software_getName(&mySoftware[i], strAp1);
-//		Software_getVersion(&mySoftware[i], strAp2);
-//		printf("%s  %s\n", strAp1, strAp2);
-//	}
+	for (int i = 0; i < numel; ++i)
+	{
+		Software_getName(&mySoftware[i], strAp1);
+		Software_getVersion(&mySoftware[i], strAp2);
+		printf("%s  %s\n", strAp1, strAp2);
+	}
 
 	return EXIT_SUCCESS;
 }
