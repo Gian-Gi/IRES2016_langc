@@ -1,2 +1,0 @@
-gcc -c software.c -Wall -std=c99
-gcc -o software software.o -lm
